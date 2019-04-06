@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Melanie Ages</title>
+    <link rel="manifest" href="https://logankeenan.github.io/how-old-is-melanie/manifest-v3.json">
+    <link rel="apple-touch-icon" href="https://logankeenan.github.io/how-old-is-melanie/images/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://logankeenan.github.io/how-old-is-melanie/images/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://logankeenan.github.io/how-old-is-melanie/images/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://logankeenan.github.io/how-old-is-melanie/images/icons/icon-512x512.png">
+    <meta name="apple-mobile-web-app-title" content="Melanie Ages">
+    <style>
+        * {
+            box-sizing: border-box;;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-image: linear-gradient(to right top, #7eccb9, #72d4b6, #68dcaf, #63e3a5, #63ea99, #43eab1, #20e8c7, #00e6da, #00d5fc, #27bdff, #909ff8, #c57ecc);
+            color: #fff;
+            font-weight: bold;
+            font-family: sans-serif;
+            padding: 3rem;
+        }
+
+        dl {
+            margin: 0;
+        }
+
+
+        dd {
+            text-align: center;
+            padding-bottom: 3rem;
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        dt {
+            text-align: center;
+            opacity: .7;
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <dt>Months</dt>
+    <dd id="months"></dd>
+
+    <dt>Weeks</dt>
+    <dd id="weeks"></dd>
+
+    <dt>Days</dt>
+    <dd id="days"></dd>
+
+    <dt>Minutes</dt>
+    <dd id="minutes"></dd>
+
+    <dt>Seconds</dt>
+    <dd id="seconds"></dd>
+
+</dl>
+
+<script src="https://unpkg.com/dayjs"></script>
+<script type="text/javascript">
+    var birth = dayjs('2019-01-04');
+    birth.hour('7:04 PM');
+
+    months.innerText = dayjs().diff(birth, 'Months');
+    weeks.innerText = dayjs().diff(birth, 'weeks');
+    days.innerText = dayjs().diff(birth, 'days');
+    minutes.innerText = dayjs().diff(birth, 'minutes');
+    seconds.innerText = dayjs().diff(birth, 'seconds');
+
+    setInterval(function () {
+        minutes.innerText = dayjs().diff(birth, 'minutes');
+        seconds.innerText = dayjs().diff(birth, 'seconds');
+
+    }, 1000);
+</script>
+</body>
+</html>
